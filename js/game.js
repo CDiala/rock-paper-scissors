@@ -60,8 +60,12 @@ function game() {
       console.log(`Wrong choice: "${playerSelection}"`);
     }
   }
-  return `${playerWinCount > computerWinCount ? "Player" : "Computer"} Wins!`;
+  let finalResult = `${
+    playerWinCount > computerWinCount ? "Player" : "Computer"
+  } Wins!`;
+  console.log(finalResult);
+  return finalResult;
 }
 
 const selectionArray = ["rock", "paper", "scissors"];
-console.log(game());
+alert(game());
