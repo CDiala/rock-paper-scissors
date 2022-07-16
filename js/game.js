@@ -59,7 +59,7 @@ function game() {
         ? playerWinCount++
         : null;
     } else {
-      console.log(`Wrong choice: "${playerSelection}"`);
+      console.log(`Wrong choice: "${playerSelection}". Try again.`);
       playCount--;
     }
   }
