@@ -42,6 +42,7 @@ function game() {
   let playerWinCount = 0;
   let computerWinCount = 0;
   for (let i = 0; i < 5; i++) {
+    window.focus();
     let playerSelection = prompt("What's your selection?");
     playerSelection = trim(playerSelection);
     let result;
@@ -49,7 +50,7 @@ function game() {
     if (isEntryValid(playerSelection)) {
       result = playRound(playerSelection, computerPlay());
 
-      console.log(result, playerSelection);
+      console.log(result);
 
       result.includes("Lose")
         ? computerWinCount++
