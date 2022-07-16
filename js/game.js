@@ -41,15 +41,14 @@ function trim(inputString) {
 function game() {
   let playerWinCount = 0;
   let computerWinCount = 0;
+
   for (let i = 0; i < 5; i++) {
-    window.focus();
+    let result;
     let playerSelection = prompt("What's your selection?");
     playerSelection = trim(playerSelection);
-    let result;
 
     if (isEntryValid(playerSelection)) {
       result = playRound(playerSelection, computerPlay());
-
       console.log(result);
 
       result.includes("Lose")
