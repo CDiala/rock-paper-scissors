@@ -3,27 +3,27 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  playerSelection = playerSelection.toLowerCase();
-
+  let result = "It's a tie!";
   if (playerSelection === "rock") {
     if (computerSelection === "scissors") {
-      return "You Win! Rock crushes Scissors";
-    } else {
-      return "You Lose! Paper covers Rock";
+      result = "You Win! Rock crushes Scissors";
+    } else if (computerSelection === "paper") {
+      result = "You Lose! Paper covers Rock";
     }
   } else if (playerSelection === "scissors") {
     if (computerSelection === "paper") {
-      return "You Win! Scissors cut Paper";
-    } else {
-      return "You Lose! Rock crushes Scissors";
+      result = "You Win! Scissors cuts Paper";
+    } else if (computerSelection === "rock") {
+      result = "You Lose! Rock crushes Scissors";
     }
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock") {
-      return "You Win! Paper covers Rock";
-    } else {
-      return "You Lose! Scissors cut Paper";
+      result = "You Win! Paper covers Rock";
+    } else if (computerSelection === "scissors") {
+      result = "You Lose! Scissors cuts Paper";
     }
   }
+  return result;
 }
 
 function isEntryValid(userInput) {
@@ -34,7 +34,7 @@ function isEntryValid(userInput) {
 
 function trim(inputString) {
   if (typeof inputString === "string") {
-    return inputString.replaceAll(" ", "");
+    return inputString.replaceAll(" ", "").toLowerCase();
   }
 }
 
@@ -49,7 +49,7 @@ function game() {
     if (isEntryValid(playerSelection)) {
       result = playRound(playerSelection, computerPlay());
 
-      console.log(result);
+      console.log(result, playerSelection);
 
       result.includes("Lose")
         ? computerWinCount++
