@@ -42,7 +42,7 @@ function game() {
   let playerWinCount = 0;
   let computerWinCount = 0;
 
-  for (let i = 0; i < 5; i++) {
+  for (let playCount = 0; playCount < 5; playCount++) {
     let result;
     let playerSelection = prompt("What's your selection?");
     playerSelection = trim(playerSelection);
@@ -58,6 +58,7 @@ function game() {
         : null;
     } else {
       console.log(`Wrong choice: "${playerSelection}"`);
+      playCount--;
     }
   }
   let finalResult = `${
