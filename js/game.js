@@ -44,7 +44,9 @@ function game() {
 
   for (let playCount = 0; playCount < 5; playCount++) {
     let result;
-    let playerSelection = prompt("What's your selection?");
+    let playerSelection = prompt(
+      "Welcome to Rock-Paper-Scissors game. \nEnter your preferred choice. \nGood luck!"
+    );
     playerSelection = trim(playerSelection);
 
     if (isEntryValid(playerSelection)) {
@@ -62,8 +64,12 @@ function game() {
     }
   }
   let finalResult = `${
-    playerWinCount > computerWinCount ? "Player" : "Computer"
-  } Wins!`;
+    playerWinCount > computerWinCount
+      ? "Player Wins!"
+      : playerWinCount < computerWinCount
+      ? "Computer Wins!"
+      : "It's a draw!"
+  } `;
   console.log(finalResult);
   return finalResult;
 }
