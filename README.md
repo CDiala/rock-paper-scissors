@@ -1,6 +1,8 @@
 # rock-paper-scissors
 The game of rock-paper-scissors written only in Vanilla JS - no HTML (just the boilerplate) or CSS. However, this can be modified to include those.
 
+Game can be accessed [here](https://cdiala.github.io/rock-paper-scissors/)
+
 ## How to play
 + Fork the project and open folder in VS Code
 + Open the index.html file in VS Code and launch with live server (you need to have the "live server" extension).
