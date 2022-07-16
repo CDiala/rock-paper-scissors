@@ -1,5 +1,5 @@
 # rock-paper-scissors
-The game of rock-paper-scissors written only in Vanilla JS - no HTML or CSS. However, this can be modified to include those.
+The game of rock-paper-scissors written only in Vanilla JS - no HTML (just the boilerplate) or CSS. However, this can be modified to include those.
 
 ## How to play
 + Fork the project and open folder in VS Code
