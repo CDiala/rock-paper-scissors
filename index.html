@@ -4,8 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Rock-Paper-Scissors</title>
     <script src="js/game.js" defer></script>
   </head>
-  <body></body>
+
+  <body>
+    <header class="game-header">
+      <h1>Let's Play Rock-Paper-Scissors</h1>
+      <br />
+      <label for="gameRound">How many rounds would you like to play?</label>
+      <input id="gameRound" type="text" placeholder="..." maxlength="2" />
+      <button class="btn-start">Start</button>
+      <p class="game-status"></p>
+    </header>
+    <main class="game-area">
+      <h2>Select your choice from the buttons below</h2>
+      <br />
+      <div class="game-container">
+        <div class="image-container">
+          <img
+            src="./images/rps_white.png"
+            alt="rock paper scissors game icon"
+          />
+        </div>
+        <section class="game-buttons-container">
+          <button class="btn-play disabled" disabled>
+            <img src="./images/rock.png" alt="" />rock
+          </button>
+          <button class="btn-play disabled" disabled>
+            <img src="./images/paper.png" alt="" />paper
+          </button>
+          <button class="btn-play disabled" disabled>
+            <img src="./images/scissors.png" alt="" />scissors
+          </button>
+        </section>
+        <section class="game-result-section">
+          <h2>Game Scores</h2>
+          <hr />
+          <div class="game-result-container"></div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
